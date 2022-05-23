@@ -1,0 +1,209 @@
+.window{
+    display: flex;
+    flex-direction: column;
+    max-width: 5000px;
+    width: 100%;
+    height: 100%;
+    font-size: clamp(18px, 4vw,140px);
+}
+.canvas{
+    color: white;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+input{
+    font-size: clamp(18px, 1.5vw,100px);
+    width:  100%;
+}
+.start{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 5%;
+}
+.start>img{
+    width: 60%;
+}
+
+h1,h2,h3{ font-size: clamp(10px, 1.6vw,60px);}
+p{ font-size: clamp(10px, 1.5vw,30px);}
+
+.panel{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    font-size: clamp(10px, 2vw,30px);
+    
+}
+.current_stats{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 40%;
+    font-weight: 600;
+    font-size: clamp(10px, 1.5vw,60px);
+}
+.lifes{
+    display: flex;
+}
+.lifes>img{
+    width: 40%;
+    height: 45%;
+    margin: 5%;
+}
+.info{
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-bottom: 1%;
+}
+.alien{
+    width: 25%;
+    height: 45%;
+    border: 5px solid #e6e9ec;
+    margin: 5%;
+}
+.content{
+    display: flex;
+    justify-content: left;
+}
+.top_panel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.test{
+    position: relative;
+}
+.result{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -1%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 99%;
+    width: 99%;
+    transition: .5s ease;
+    background-color: #00000069;
+}
+.result>img{
+    width: 50%;
+}
+
+.passport{
+    display: block;
+    border-radius: 5px;
+    border: 2px solid #eaece6;
+    background-color: #eaece625;
+    margin: 2%;
+}
+.purpose{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    border: 2px solid #e6e9ec;
+    background-color: #e6e9ec25;
+    border-radius: 5px;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+}
+.bottom_panel{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    border: 2px solid #949596;
+    background-color: #506b78ad;
+    border-radius: 5px;
+    width: 80%;
+    margin-top: 1%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.bottom_panel>img{
+    width: 30%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+label{
+    margin-top: 10%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    font-size: clamp(10px, 1.6vw,60px);
+}
+
+.ui-widget{
+    font-size: clamp(10px, 1.3vw,40px);
+}
+
+#container {
+    display: block; 
+    position:relative
+} 
+.ui-autocomplete {
+    position: absolute;
+}
+.ui-autocomplete.ui-widget{ font-size: clamp(10px, 2vw,60px);}
+
+.ending{ margin-top: 20%;}
+
+#dialog{
+    color: white; 
+    background-color: #3c4f58;
+    font-size: clamp(10px, 1.3vw,40px);
+    padding: 10%;
+}
+.ui-dialog{
+    color: white; 
+    font-size: clamp(8px, 1vw,40px);
+    background-color: #9dcde4;
+}
+
+@media ( min-width: 1000px){
+    .window{height: 95%;}
+    .current_stats{width:30%;}
+    .panel{width: 70%;}
+    .passport{ border-radius: 20px;}
+    .alien{width: 35%;}
+    .bottom_panel{ border-radius: 10px;}
+    .lifes{width: 25%;}
+    h1,h2,label,label>button,.current_stats{ font-size: clamp(10px, 1.2vw,35px);}
+    label>button{width: 40%;}
+    .bottom_panel>img{width: 18%;}
+    p{ font-size: clamp(10px, 1vw,50px);}
+}
+@media ( min-width: 2000px){
+    .lifes{width: 40%;}
+    .panel{width: 70%; height: auto;}
+    .top_panel{width: 90%;}
+    .test{width: 60%;}
+    .passport{border-radius: 60px;}
+    label>button{width: 40%;}
+    h1,label,label>button,.current_stats{ font-size: clamp(10px, 1.7vw,70px); }
+    h2{ font-size: clamp(10px, 1.7vw,64px); }
+    p{ font-size: clamp(10px, 1.5vw,50px);}
+    .bottom_panel{ border-radius: 20px;}
+    .bottom_panel>img{width: 20%;}
+
+    @media ( max-height: 1000px){
+        .window{width: 80%;}
+        .bottom_panel>img{width: 20%;}
+        h1,label,label>button,.current_stats{ font-size: clamp(8px, 1.5vw,60px); }
+        p{ font-size: clamp(10px, 1vw,50px);}
+    }
+}
+
+
+
+

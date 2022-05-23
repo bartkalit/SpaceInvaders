@@ -1,0 +1,66 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+}
+.dashboard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 5000px;
+    width: 100%;
+    height: 88%;
+    background-color: #27283194;
+}
+.dashboard>div{
+    font-size: clamp(18px, 4vw,110px);
+    text-align: center;
+    width: 250px;
+    height: 50%;
+    margin: 5%;
+    border-radius: 2%;
+    -webkit-box-shadow: 0px 0px 46px 5px rgba(5,0,8,0.94);
+    -moz-box-shadow: 0px 0px 46px 5px rgba(5,0,8,0.94);
+    box-shadow: 0px 0px 46px 5px rgba(5,0,8,0.94);
+
+}
+.game{
+    color: white;
+    background-image: url(../../assets/Img/galaxy.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.scoreboard{
+    color: white;
+    background-image: url(../../assets/Img/crown.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.dashboard>div:first-child{
+    background-color: #000000;
+}
+
+@media (min-width: 300px){
+    .dashboard>div{
+        height: 79%;
+        width: 90%;
+    }
+}
+@media (min-width: 1000px){
+    .dashboard{
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+    main{
+        height: 100%;
+    }
+    .dashboard>div{
+        height: 79%;
+        width: 120%;
+    }
+}

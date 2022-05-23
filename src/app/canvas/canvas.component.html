@@ -1,0 +1,64 @@
+<div class="window">
+    <div class="canvas">
+        <label *ngIf="!name_given">
+            <div class="ui-widget">
+                <label for="tags">Nick: </label>
+                <input id="tags" #nameInput>
+                <div id="container"></div>
+            </div>
+            <div class="start">
+                <img src="../../assets/Img/start.png" alt="Start" (click)="whatsthename(nameInput.value)"/>
+            </div>
+        </label>
+        <div class="panel" *ngIf=":(name_given && !finished)">
+            <div id="dialog" title="INSTRUCTION">
+                <p>You work as customs officer and <br>depending on the given information you need to decide<br>on letting someone enter the earth<br> Good luck!</p>
+            </div>
+            <div class="current_stats">
+                <div class="text">
+                    <h1 id="score">SCORE: 0</h1>
+                </div>
+                <div class="lifes">
+                    <img id="life1" src="../../assets/Img/heart.png" alt="Life 1">
+                    <img id="life2" src="../../assets/Img/heart.png" alt="Life 2">
+                    <img id="life3" src="../../assets/Img/heart.png" alt="Life 3">
+                </div>
+            </div>
+            <div class="top_panel">
+                <div class="test">
+                    <div class="passport">
+                        <div class="content">
+                            <img class="alien" src="{{alien.photo}}" alt="Alien.png"/>
+                            <div class="info">
+                                <h2>Name:</h2>
+                                <p>{{alien.name}}</p>
+                                <h2>Nationality:</h2>
+                                <p>{{alien.nationality}}</p>
+                                <h2>Date of birth:</h2>
+                                <p>{{alien.DateOfBirth}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngIf="result" class="result">
+                        <img src="{{result_img}}">
+                    </div>
+                </div>
+            </div>
+            <div class="purpose">
+                <div class="info">
+                    <h1>Purpose:</h1>
+                    <p>{{alien.purpose}}</p>
+                    <h1>Residance period:</h1>
+                    <p>{{alien.period}}</p>
+                </div>
+            </div>
+            <div class="bottom_panel">
+                <img src="{{green_button}}" alt="Accept" (click)="ButtonCheck(0)"/>
+                <img src="{{red_button}}" alt="Deny" (click)="ButtonCheck(1)"/>
+            </div>
+        </div>
+        <div class="ending" *ngIf="finished">
+            You reached the end of the game!
+        </div>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+    background-color: #000000;
+}
+html{ height: 100%;}
+body {
+    font-family: 'Orbitron', sans-serif;
+    height: 90%;
+    animation: animated-border 440s linear infinite ;
+}
+.ui-dialog{
+    color: black; 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: clamp(8px, 1.3vw,30px);
+    background-color: white;
+    text-align: center;
+    width: 20vw;
+}
+.ui-dialog-titlebar{
+    display: flex;
+    justify-content: space-around;
+}
+.ui-button{
+    border: none;
+    font-size: clamp(8px, 1.3vw,40px);
+}
+.ui-helper-hidden-accessible{
+    display: none;
+}
+@keyframes animated-border{
+    25%{
+        background-position: left bottom;
+    }
+    50%{
+        background-position: right bottom;
+    }
+    75%{
+        background-position: right top;
+    }
+    100%{
+        background-position: left top;
+    }
+}
